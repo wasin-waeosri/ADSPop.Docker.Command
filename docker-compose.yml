@@ -1,0 +1,11 @@
+version: "3"
+services: 
+    adspop:
+        image: refinitivrealtime/adspop:3.5.1.L1
+        ports: 
+            - 14002:14002
+            - 15000:15000
+        volumes: 
+            - "c:\\adspop\\config:/opt/distribution/config"
+            - "c:\\adspop\\debug:/opt/distribution/debug"
+            - "c:\\adspop\\log:/opt/distribution/log"
