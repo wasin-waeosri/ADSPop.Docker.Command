@@ -1,11 +1,21 @@
 version: "3"
 services: 
     adspop:
-        image: refinitivrealtime/adspop:3.5.1.L1
+        container_name: adspop
+        image: refinitivrealtime/adspop:${VERSION}
         ports: 
+        #     - 14022:14022
+        #     - 15005:15005
+        #     - 8108:8108
             - 14002:14002
             - 15000:15000
+            - 8101:8101
+        #    - 14005:14005
+            - 8080:8080
         volumes: 
             - "c:\\adspop\\config:/opt/distribution/config"
             - "c:\\adspop\\debug:/opt/distribution/debug"
             - "c:\\adspop\\log:/opt/distribution/log"
+            #- "/mnt/c/adspop/config:/opt/distribution/config"
+            #- "/mnt/c/adspop/debug:/opt/distribution/debug"
+            #- "/mnt/c/adspop/log:/opt/distribution/log"
