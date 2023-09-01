@@ -12,10 +12,11 @@ services:
             - 8101:8101
         #    - 14005:14005
             - 8080:8080
+            - 14003:14003
         volumes: 
-            - "c:\\adspop\\config:/opt/distribution/config"
-            - "c:\\adspop\\debug:/opt/distribution/debug"
-            - "c:\\adspop\\log:/opt/distribution/log"
-            #- "/mnt/c/adspop/config:/opt/distribution/config"
-            #- "/mnt/c/adspop/debug:/opt/distribution/debug"
-            #- "/mnt/c/adspop/log:/opt/distribution/log"
+            # - "c:\\adspop\\config:/opt/distribution/config"
+            # - "c:\\adspop\\debug:/opt/distribution/debug"
+            # - "c:\\adspop\\log:/opt/distribution/log"
+            - "/mnt/c/adspop/config:/opt/distribution/config"
+            - "/mnt/c/adspop/debug:/opt/distribution/debug"
+            - "/mnt/c/adspop/log:/opt/distribution/log"
